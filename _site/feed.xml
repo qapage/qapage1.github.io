@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QA Page</title>
+    <description>All things QA, one page at a time.</description>
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Functional testing an API</title>
+        <description>
+          
+          Lets get started Let’s take a super simple http API that’s available on the internet and try to test that. A good example API is - ipify that returns the calling client’s IP address in text/json/jsonp format. Lets decide up on a mini test plan of sort. Here are the...
+        </description>
+        <pubDate>Tue, 20 Jun 2017 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2017-06-20-Testing-an-API-with-Python/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-06-20-Testing-an-API-with-Python/</guid>
+      </item>
+    
+      <item>
+        <title>Building high performing teams</title>
+        <description>
+          
+          So you’re building a team at your company and want the best folks out there. As the hiring manager, you feel the pressure and the pain. Past hiring mistakes quickly flash before your eyes. You see flashbacks of late nights and weekends you and your team worked because you were...
+        </description>
+        <pubDate>Tue, 06 Jun 2017 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2017-06-06-Building-high-performing-teams/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-06-06-Building-high-performing-teams/</guid>
+      </item>
+    
+      <item>
+        <title>Windows Desktop Automation</title>
+        <description>
+          
+          Testing a windows desktop application just got easier (at least it did for me). Here’s a no license, no nonsense solution to testing your windows applications. And its all in Python. Tools we’ll use today, PyWinAuto - a Windows GUI automation library written in pure Python SWAPY - a tool...
+        </description>
+        <pubDate>Mon, 20 Mar 2017 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2017-03-20-Windows-destop-automation/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-03-20-Windows-destop-automation/</guid>
+      </item>
+    
+      <item>
+        <title>Automated accessibility testing</title>
+        <description>
+          
+          Ok, so you want to test your website for compliance with Section 508c. Where do you start? Thankfully, you don’t have to shell out big bucks to get a report that tells you about your website’s 508C compliance. Open Source FTW! Enter pa11y Lets do the (short) setup and get...
+        </description>
+        <pubDate>Mon, 20 Mar 2017 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2017-03-20-Automated-accessibility-testing/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-03-20-Automated-accessibility-testing/</guid>
+      </item>
+    
+      <item>
+        <title>How to do different tasks on mysql</title>
+        <description>
+          
+          Here’s a list of things that I’ve had to do on mysql from time to time. You dont always need these but when you do, its good to have them put together in one place. Enable logging and get all sql queries hitting a mysql DB written to a log...
+        </description>
+        <pubDate>Mon, 06 Feb 2017 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2017-02-06-How-to-different-tasks-on-mysql/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-02-06-How-to-different-tasks-on-mysql/</guid>
+      </item>
+    
+      <item>
+        <title>My top linux commands</title>
+        <description>
+          
+          I’ve mostly worked on linux/unix machines for the most part of my career. These are some of the linux commands that have been very useful to me in different situations on various projects, testing related or otherwise. top Find load on a box, get a list of different processes running...
+        </description>
+        <pubDate>Fri, 20 Jan 2017 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2017-01-20-My-top-linux-commands/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-01-20-My-top-linux-commands/</guid>
+      </item>
+    
+      <item>
+        <title>Service virtualization with hoverfly</title>
+        <description>
+          
+          Hoverfly from spect.io is an open source tool that allows one to simulate an API, capture, modify and playback responses from an API etc. It is an invaluable tool that speeds up your testing and helps you simulate those hard to reproduce situations when dealing with a real API. Say...
+        </description>
+        <pubDate>Wed, 18 Jan 2017 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2017-01-18-Service-virtualization-with-hoverfly/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-01-18-Service-virtualization-with-hoverfly/</guid>
+      </item>
+    
+      <item>
+        <title>Data comparison between csv files</title>
+        <description>
+          
+          Data comparison between csv files Here’s the problem - you have two csv files that came from two different accounting systems. Ideally they would both have the same data but sometimes, they differ. And when they differ, thats a problem that the company’s accounting department cares greatly about and needs...
+        </description>
+        <pubDate>Wed, 18 Jan 2017 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2017-01-18-Data-comparison-between-csvfiles/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-01-18-Data-comparison-between-csvfiles/</guid>
+      </item>
+    
+      <item>
+        <title>Performance testing an API</title>
+        <description>
+          
+          There are several good tools that can help you performance test an API. I’ve used jmeter, locust.io and a wee bit of Gatling. locust.io has become my go to tool for all recent performance testing work. Why locust.io? Ease of use Its really easy to get started and have a...
+        </description>
+        <pubDate>Mon, 16 Jan 2017 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2017-01-16-Performance-testing-an-API/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-01-16-Performance-testing-an-API/</guid>
+      </item>
+    
+  </channel>
+</rss>

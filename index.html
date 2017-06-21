@@ -1,0 +1,20 @@
+---
+layout: page
+title: QA Page
+use-site-title: true
+bigimg: /img/smyrna.jpg
+---
+
+<h2 class="post-title"> Welcome to QA Page.com!</h2>
+<div class="post-entry">
+  This is a page that is for all things QA related. I’ve relied on a lot of resources on the internet for bringing myself up to speed on topics like performance testing, automation testing, testing process, test metrics etc etc and I always hoped I could find all or most of that information in one place. This site is going to serve as that single source of information for me and hopefully for everyone out there that is looking for QA related information.
+</div>
+
+<br>
+<h2 class="post-title"> Listed below are some of our articles,</h2>
+
+{% for post in paginator.posts %}
+  * {{ post.date | date_to_string }} &raquo;
+    <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">{{post.title}}</a>
+    <br>
+{% endfor %}

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>How to do different tasks on mysql</title>
+
+  <meta name="author" content="Deepak Bhaskaran" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="QA Page - All things QA, one page at a time." href="/feed.xml" />
+
+  
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="How to do different tasks on mysql" />
+  
+
+   
+  <meta property="og:description" content="Here’s a list of things that I’ve had to do on mysql from time to time. You dont always need these but when you do, its good to have them put together in one place. Enable logging and get all sql queries hitting a mysql DB written to a log...">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/2017-02-06-How-to-different-tasks-on-mysql/" />
+  <link rel="canonical" href="http://localhost:4000/2017-02-06-How-to-different-tasks-on-mysql/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/img/Rage-star.png" />
+  
+  
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@yourname" />
+  <meta name="twitter:creator" content="@yourname" />
+
+  
+  <meta name="twitter:title" content="How to do different tasks on mysql" />
+  
+
+  
+  <meta name="twitter:description" content="Here’s a list of things that I’ve had to do on mysql from time to time. You dont always need these but when you do, its good to have them put together in one place. Enable logging and get all sql queries hitting a mysql DB written to a log...">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/img/Rage-star.png" />
+  
+
+</head>
+
+
+  <body>
+
+    
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">QA Page</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/AboutMe">About</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/Archive">Archives</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Resources</a>
+            <div class="navlinks-children">
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/FAQs">FAQs</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/Materials">Recommended Materials</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://localhost:4000 ">
+	      <img class="avatar-img" src="/img/Rage-star.png" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+	  
+	  
+	    
+		  data-img-src-1="/img/smyrna.jpg"
+		
+	  
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>How to do different tasks on mysql</h1>
+		  
+		  
+		  
+		  <span class="post-meta">Posted on February 6, 2017</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>How to do different tasks on mysql</h1>
+		  
+		  
+		  
+		  <span class="post-meta">Posted on February 6, 2017</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      <article role="main" class="blog-post">
+        <p>Here’s a list of things that I’ve had to do on mysql from time to time.  You dont always need these but when you do, its good to have them put together in one place.</p>
+
+<h4 id="enable-logging-and-get-all-sql-queries-hitting-a-mysql-db-written-to-a-log-file">Enable logging and get all sql queries hitting a mysql DB written to a log file</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mysql&gt; show variables like “general_log%”; This shows you two values usually. One ‘’ is a flag for setting general logging on and off. The other ‘’ is where to actually log to.
+
+mysql&gt; SET GLOBAL general_log = ‘ON’;
+
+mysql&gt; show variables like “general_log%”;
++——————+————————-+
+| Variable_name    | Value                   |
++——————+————————-+
+| general_log      | ON                      |
+| general_log_file | /var/lib/mysql/logname.log |
++——————+————————-+
+2 rows in set (0.00 sec)
+
+tail -f /var/log/mysqld/logname.log
+</code></pre>
+</div>
+
+<p>When you’ve gotten what you’re looking for, go back and turn off the
+logging.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mysql&gt; SET GLOBAL general_log = 'OFF’;
+</code></pre>
+</div>
+
+<h4 id="enabling-slow-query-logging">Enabling slow query logging</h4>
+
+<p>You notice a web page loading slowly and you suspect it might be because its taking a long time to fetch the results from the DB. Or you’re running performance tests against your system and you want to find out which of your queries are running slowly and hurting your system’s response time? Well - mysql has a slow query logging facility that can help you narrow down the issue.</p>
+
+<p>ssh into your mysql server as a user that has superuser privileges etc and add the below lines to /etc/my.cnf and restart mysql service on that box.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[mysqld]
+slow_query_log=1
+slow_query_log_file=/tmp/slow.log
+long_query_time=2
+</code></pre>
+</div>
+
+<p>The ‘slow_query_log’ flag turns on or off slow query logging. The ‘slow_query_log_file’ setting specifies the actual file to log to and the ‘long_query_time’ is the setting where you specify what is to be considered a slow query. Here, 2 stands for anything longer than 2 seconds.</p>
+
+<p>And you’re all set! Run your tests, your UI scripts etc and then check in on the /tmp/slow.log file and you should see the queries you’re interested in.</p>
+
+<h4 id="listing-out-all-the-currently-executing-queries-on-a-mysql-server">Listing out all the currently executing queries on a mysql server</h4>
+
+<p>The <code class="highlighter-rouge">show processlist</code> command is really useful in that, it shows you whats currently executing on your mysql server, what state they are in etc etc. Sort of like the <code class="highlighter-rouge">ps -ef</code> for mysql.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mysql&gt; show processlist;
++—-+——+———–+——-+———+——-+———-+——————+
+| Id | User | Host      | db    | Command | Time  | State    | Info
+|
++—-+——+———–+——-+———+——-+———-+——————+
+| 29 | test  | localhost | test   | Sleep   |   281 |          | NULL
+|
+| 30 | test  | localhost | test   | Sleep   |   281 |          | NULL
+|
+| 31 | test  | localhost | test   | Sleep   |   281 |          | NULL
+|
+| 32 | test  | localhost | test   | Sleep   | 15280 |          | NULL
+|
+| 35 | test  | localhost | dbmap | Sleep   | 13481 |          | NULL
+|
+| 41 | test  | localhost | dbmap | Sleep   |  3033 |          | NULL
+|
+| 42 | test  | localhost | test   | Sleep   |  3033 |          | NULL
+|
+| 43 | root | localhost | NULL  | Query   |     0 | starting | show
+processlist |
++—-+——+———–+——-+———+——-+———-+——————+
+8 rows in set (0.00 sec)
+</code></pre>
+</div>
+
+<h4 id="getting-mysql-server-status-from-the-command-line">Getting mysql server status from the command line</h4>
+
+<p>After you’ve logged into your mysql server, issue the <code class="highlighter-rouge">status</code> command to see various bits of information about your mysql server and your current session, including current user, current database, is SSL being used or not, mysql version, Server characterset, uptime of the server, number of slow queries, no of open tables, average number of queries per second etc. Here’s a sample output,</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mysql&gt; status
+————–
+mysql  Ver 14.14 Distrib 5.7.17, for Linux (x86_64) using  EditLine
+wrapper
+
+Connection id:          59
+Current database:       test
+Current user:           root@localhost
+SSL:                    Not in use
+Current pager:          stdout
+Using outfile:          ’’
+Using delimiter:        ;
+Server version:         5.7.17 MySQL Community Server (GPL)
+Protocol version:       10
+Connection:             Localhost via UNIX socket
+Server characterset:    latin1
+Db     characterset:    utf8
+Client characterset:    utf8
+Conn.  characterset:    utf8
+UNIX socket:            /var/lib/mysql/mysql.sock
+Uptime:                 4 hours 39 min 28 sec
+
+Threads: 8  Questions: 7605  Slow queries: 0  Opens: 626  Flush tables:
+1  Open tables: 588  Queries per second avg: 0.453
+</code></pre>
+</div>
+
+<h4 id="finding-simple-things-about-the-db-like---what-are-the-different">Finding simple things about the DB like - what are the different</h4>
+<p>databases available, what are the different tables in current DB etc</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>show databases;
+
+show tables;
+</code></pre>
+</div>
+
+<h4 id="the-easier-way-to-get-deadlock-data-to-find-deadlocks-in-your-db">The easier way to get deadlock data to find deadlocks in your DB</h4>
+
+<p>Install innotop (yum install innotop).</p>
+
+<p>Once you’ve got that installed, you can connect innotop to your DB from
+the command line like this</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>innotop –user root –askpass
+</code></pre>
+</div>
+
+<p>and you will be prompted for the password on the command line. Then you
+will be placed in the Dashboard view of innotop. Hit ? there and you
+will see a list of different information screens that you can then
+navigate to depending on what you’re trying to find out. L for locks, U
+for user statistics, D for InnoDB deadlocks, M for replication status, K
+for InnoDB Lock Waits etc. Try it out!</p>
+
+<p>This article has a whole lot more information on <a href="https://www.tecmint.com/install-innotop-to-monitor-mysql-server-performance/">using
+innotop</a></p>
+
+<h4 id="finding-deadlocks-with-queries-running-against-your-db-the-harder-way">Finding deadlocks with queries running against your DB (The harder way)</h4>
+
+<p>The <code class="highlighter-rouge">show engine innodb status;</code> gives you a whole lot of data about
+your database. One of the things that I find useful is the data on
+deadlocks.</p>
+
+<p>Here’s a sample output from this command, (Warning - wall of text coming
+your way, my apologies!)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>| InnoDB |      |
+=====================================
+2017-02-06 21:32:28 0x7f5326922700 INNODB MONITOR OUTPUT
+=====================================
+Per second averages calculated from the last 2 seconds
+—————–
+BACKGROUND THREAD
+—————–
+srv_master_thread loops: 32 srv_active, 0 srv_shutdown, 15943 srv_idle
+srv_master_thread log flush and writes: 15975
+———-
+SEMAPHORES
+———-
+OS WAIT ARRAY INFO: reservation count 1101
+OS WAIT ARRAY INFO: signal count 1033
+RW-shared spins 0, rounds 399, OS waits 218
+RW-excl spins 0, rounds 127, OS waits 3
+RW-sx spins 0, rounds 0, OS waits 0
+Spin rounds per wait: 399.00 RW-shared, 127.00 RW-excl, 0.00 RW-sx
+————
+TRANSACTIONS
+————
+Trx id counter 4075
+Purge done for trx’s n:o &lt; 3940 undo n:o &lt; 0 state: running but idle
+History list length 17
+LIST OF TRANSACTIONS FOR EACH SESSION:
+—TRANSACTION 421470258491456, not started
+0 lock struct(s), heap size 1136, 0 row lock(s)
+—TRANSACTION 421470258489632, not started
+0 lock struct(s), heap size 1136, 0 row lock(s)
+—TRANSACTION 421470258488720, not started
+0 lock struct(s), heap size 1136, 0 row lock(s)
+—TRANSACTION 421470258490544, not started
+0 lock struct(s), heap size 1136, 0 row lock(s)
+—TRANSACTION 421470258487808, not started
+0 lock struct(s), heap size 1136, 0 row lock(s)
+—TRANSACTION 421470258486896, not started
+0 lock struct(s), heap size 1136, 0 row lock(s)
+—TRANSACTION 421470258485984, not started
+0 lock struct(s), heap size 1136, 0 row lock(s)
+—TRANSACTION 421470258485072, not started
+0 lock struct(s), heap size 1136, 0 row lock(s)
+LOG
+—
+Log sequence number 5145450
+Log flushed up to   5145450
+Pages flushed up to 5145450
+Last checkpoint at  5145441
+0 pending log flushes, 0 pending chkp writes
+1490 log i/o’s done, 0.00 log i/o’s/second
+———————-
+BUFFER POOL AND MEMORY
+———————-
+Total large memory allocated 137428992
+Dictionary memory allocated 2551617
+Buffer pool size   8191
+Free buffers       7084
+Database pages     1096
+Old database pages 384
+Modified db pages  0
+Pending reads      0
+Pending writes: LRU 0, flush list 0, single page 0
+Pages made young 0, not young 0
+0.00 youngs/s, 0.00 non-youngs/s
+Pages read 231, created 865, written 1002
+0.00 reads/s, 0.00 creates/s, 0.00 writes/s
+No buffer pool page gets since the last printout
+Pages read ahead 0.00/s, evicted without access 0.00/s, Random read
+ahead 0.00/s
+LRU len: 1096, unzip_LRU len: 0
+I/O sum[0]:cur[0], unzip sum[0]:cur[0]
+————–
+ROW OPERATIONS
+————–
+0 queries inside InnoDB, 0 queries in queue
+0 read views open inside InnoDB
+Process ID=5270, Main thread ID=139994953017088, state: sleeping
+Number of rows inserted 5124, updated 362, deleted 17, read 21639
+0.00 inserts/s, 0.00 updates/s, 0.00 deletes/s, 0.00 reads/s
+</code></pre>
+</div>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+            mysql
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=How+to+do+different+tasks+on+mysql+http://localhost:4000/2017-02-06-How-to-different-tasks-on-mysql/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2017-02-06-How-to-different-tasks-on-mysql/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2017-02-06-How-to-different-tasks-on-mysql/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2017-01-20-My-top-linux-commands/" data-toggle="tooltip" data-placement="top" title="My top linux commands">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="/2017-03-20-Automated-accessibility-testing/" data-toggle="tooltip" data-placement="top" title="Automated accessibility testing">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/qapage" title="GitHub">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">GitHub</span>
+            </a>
+          </li>
+          
+		  
+	  
+      
+		  
+          <li>
+            <a href="mailto:deepak.bhaskaran@gmail.com" title="Email me">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Email me</span>
+            </a>
+          </li>
+          
+		  
+          <li>
+            <a href="https://linkedin.com/in/deepakbhaskaran" title="LinkedIn">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </li>
+          
+		  
+		  
+      
+      
+      
+      
+      
+		  
+        </ul>
+        <p class="copyright text-muted">
+		  Deepak Bhaskaran
+		  &nbsp;&bull;&nbsp;
+		  2017
+
+		  
+		  &nbsp;&bull;&nbsp;
+		  <a href="http://localhost:4000">qapage.com</a>
+		  
+	    </p>
+	        <!-- Please don't remove this, keep my open source work credited :) -->
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+
+  
+  </body>
+</html>

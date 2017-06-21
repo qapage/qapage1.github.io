@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Performance testing an API</title>
+
+  <meta name="author" content="Deepak Bhaskaran" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="QA Page - All things QA, one page at a time." href="/feed.xml" />
+
+  
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Performance testing an API" />
+  
+
+   
+  <meta property="og:description" content="There are several good tools that can help you performance test an API. I’ve used jmeter, locust.io and a wee bit of Gatling. locust.io has become my go to tool for all recent performance testing work. Why locust.io? Ease of use Its really easy to get started and have a...">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/2017-01-16-Performance-testing-an-API/" />
+  <link rel="canonical" href="http://localhost:4000/2017-01-16-Performance-testing-an-API/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/img/Rage-star.png" />
+  
+  
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@yourname" />
+  <meta name="twitter:creator" content="@yourname" />
+
+  
+  <meta name="twitter:title" content="Performance testing an API" />
+  
+
+  
+  <meta name="twitter:description" content="There are several good tools that can help you performance test an API. I’ve used jmeter, locust.io and a wee bit of Gatling. locust.io has become my go to tool for all recent performance testing work. Why locust.io? Ease of use Its really easy to get started and have a...">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/img/Rage-star.png" />
+  
+
+</head>
+
+
+  <body>
+
+    
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">QA Page</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/AboutMe">About</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+            
+
+
+
+
+
+<a href="/Archive">Archives</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Resources</a>
+            <div class="navlinks-children">
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/FAQs">FAQs</a>
+
+                
+              
+                
+                  
+            
+
+
+
+
+
+<a href="/Materials">Recommended Materials</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://localhost:4000 ">
+	      <img class="avatar-img" src="/img/Rage-star.png" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Performance testing an API</h1>
+		  
+		  
+		  
+		  <span class="post-meta">Posted on January 16, 2017</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      <article role="main" class="blog-post">
+        <p>There are several good tools that can help you performance test an API. I’ve used jmeter, locust.io and a wee bit of Gatling. locust.io has become my go to tool for all recent performance testing work.</p>
+
+<p>Why locust.io?</p>
+
+<h4 id="ease-of-use">Ease of use</h4>
+<p>Its really easy to get started and have a working performance test running with locust</p>
+
+<h4 id="open-source">Open source</h4>
+<p>The code is available to you! Say you’re working on a project and that turns out to need more than what locust offers out of the box. What now? If you know a bit of python or are willing to dig in and learn, you can look at the code and make your changes! If its something that might be universally useful, you just submit a pull request and there’s a good chance it will get added into the product itself.</p>
+
+<h4 id="python">python</h4>
+<p>Everything in locust.io is python based. Your tests get written in python, the entire codebase of locust.io is python based etc. So if you already know python - locust is going to be piece of cake.</p>
+
+<h4 id="lightweight">lightweight</h4>
+<p>locust is extremely light weight and can be run on your personal machine to generate pretty high loads on the target machine. I’ve sometimes run into a limitation while using jmeter, which is java based, where it ends up taking my personal machine down while trying to generate high enough loads to load the target machine.</p>
+
+<h4 id="sample-code">Sample Code</h4>
+
+<p>I like to read a little intro and then right away look at code. This article is written that way as well, here’s a simple code example.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>from locust import HttpLocust, TaskSet
+
+def login(l):
+  l.client.get("/", verify=False)
+
+def index(l):
+  l.client.get("/", verify=False)
+  
+class UserBehavior(TaskSet):
+  tasks = {index:2, login:1 }
+
+class WebsiteUser(HttpLocust):
+  task_set = UserBehavior
+  min_wait = 5000
+  max_wait = 9000
+</code></pre>
+</div>
+
+<p>I’ve defined a class named UserBehavior that (as the name suggests), models the user’s behavior. In this case, there are two tasks that the user does</p>
+
+<ul>
+  <li>hit the index page, represented by the index() function</li>
+  <li>hit the login page, represented by the login() function</li>
+</ul>
+
+<p>If you look closely, the variable tasks contains the list of tasks that are to be run as part of the performance test and also the relative frequency at which to run them (or weightage). The index task is run twice as frequently as the login task. The power of this is immense - you can simulate user behavior where the user searches 10 times and then checkouts 1 item, for example or logins in, does 10 different tasks and logs out etc as part of every test.</p>
+
+<p>The min_wait and max_wait are set to 5000 and 9000, which means each simulated user will wait between 5 and 9 seconds between the requests.</p>
+
+<h4 id="launching">Launching</h4>
+
+<p>Where to start? Right here - just follow the below steps</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pip install virtualenv
+virtualenv &lt;name your environment&gt; eg, virtualenv perftest
+source perftest/bin/activate
+pip install locustio
+Copy the above script into a python file named locustfile.py
+start locust with this command `locust -f locustfile.py –host &lt;your apps url&gt;`
+profit!
+Step one, two &amp; three create a python virtualenv for you to play around in. Step four gets locust installed. 
+</code></pre>
+</div>
+
+<p>What do the results look like?</p>
+
+<p>The results look like for our example,</p>
+
+<p><img src="/assets/locust_start.png" alt="placeholder" />
+<img src="/assets/locust_results.png" alt="placeholder" /></p>
+
+<p>You know now that your app supports 20 concurrent users, hitting the app at the rate of 3 new requests per second - without resulting in any failures. You can keep increasing the rate of new users and the total number of concurrent users until you see failures - if you want to find out your system’s limits.</p>
+
+<h4 id="additional-ideas">Additional Ideas</h4>
+
+<p>Suppose you have a library that someone has built around your REST API. That means its really simple to interact with the API now but you’re not able to use the requests library directly and thus locust does not know if a request failed or passed, how long it took etc. What do you do now?</p>
+
+<p>Luckily, the folks at locust.io thought about everything.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>auth_status = testCase1.custom_check_using_wrapper_overREST(auth_res_txid)
+total_time = int((time.time() - start_time) * 1000)
+if auth_status == ‘allow’: #Success!
+        events.request_success.fire(request_type='https’, name='enrollpushapprove’, response_time=total_time, response_length=0)
+else: #Failure
+        events.request_failure.fire(request_type='https’, name='status_not_allow’, exception='auth_status_not_allow’)
+
+</code></pre>
+</div>
+
+<p>What did we just do? We ran a function named custom_check_using_wrapper that was a wrapper over a REST API and used a value it returned to tell locust if the request was successful or not. Locust has these powerful event hooks that allow you to write up such tests.</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+            csv
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=Performance+testing+an+API+http://localhost:4000/2017-01-16-Performance-testing-an-API/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2017-01-16-Performance-testing-an-API/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2017-01-16-Performance-testing-an-API/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        
+        <li class="next">
+          <a href="/2017-01-18-Data-comparison-between-csvfiles/" data-toggle="tooltip" data-placement="top" title="Data comparison between csv files">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/qapage" title="GitHub">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">GitHub</span>
+            </a>
+          </li>
+          
+		  
+	  
+      
+		  
+          <li>
+            <a href="mailto:deepak.bhaskaran@gmail.com" title="Email me">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Email me</span>
+            </a>
+          </li>
+          
+		  
+          <li>
+            <a href="https://linkedin.com/in/deepakbhaskaran" title="LinkedIn">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </li>
+          
+		  
+		  
+      
+      
+      
+      
+      
+		  
+        </ul>
+        <p class="copyright text-muted">
+		  Deepak Bhaskaran
+		  &nbsp;&bull;&nbsp;
+		  2017
+
+		  
+		  &nbsp;&bull;&nbsp;
+		  <a href="http://localhost:4000">qapage.com</a>
+		  
+	    </p>
+	        <!-- Please don't remove this, keep my open source work credited :) -->
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+
+  
+  </body>
+</html>
