@@ -3,7 +3,6 @@ layout: post
 title: Windows Desktop Automation
 categories: [test automation, windows desktop automation]
 tags: [test automation, windows desktop automation]
-bigimg: /img/smyrna.jpg
 ---
 
 Testing a windows desktop application just got easier (at least it did for me). Here’s a no license, no nonsense solution to testing your windows applications. And its all in Python.

@@ -3,7 +3,6 @@ layout: post
 title: Automated accessibility testing
 categories: [test automation, accessibility]
 tags: [test automation, accessibility]
-bigimg: /img/smyrna.jpg
 ---
 #### Ok, so you want to test your website for compliance with Section 508c.  Where do you start?
 

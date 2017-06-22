@@ -3,7 +3,6 @@ layout: post
 title: How to do different tasks on mysql
 categories: [mysql]
 tags: [mysql]
-bigimg: /img/smyrna.jpg
 ---
 Here’s a list of things that I’ve had to do on mysql from time to time.  You dont always need these but when you do, its good to have them put together in one place.
 

@@ -2,7 +2,6 @@
 layout: page
 title: Archive
 subtitle: Previous posts
-bigimg: /img/smyrna.jpg
 ---
 
 ## Blog Posts

@@ -3,7 +3,6 @@ layout: post
 title: Functional testing an API
 categories: [API, testing]
 tags: [API]
-bigimg: /img/smyrna.jpg
 ---
 
 #### Lets get started

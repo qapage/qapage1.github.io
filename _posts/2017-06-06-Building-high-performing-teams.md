@@ -3,7 +3,6 @@ layout: post
 title: Building high performing teams
 categories: [performance,management]
 tags: [performance,management]
-bigimg: /img/smyrna.jpg
 ---
 
 So you’re building a team at your company and want the best folks out there. As the hiring manager, you feel the pressure and the pain. Past hiring mistakes quickly flash before your eyes. You see flashbacks of late nights and weekends you and your team worked because you were understaffed and just could not hire fast enough. A shiver runs through your spine.

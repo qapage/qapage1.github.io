@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Data comparison between csv files
-bigimg: /img/smyrna.jpg
 ---
 
 #### Data comparison between csv files

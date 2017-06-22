@@ -2,7 +2,6 @@
 layout: page
 title: FAQs
 subtitle: Here are some frequently asked questions and their answers.
-bigimg: /img/smyrna.jpg
 ---
 
 ##### What is QA?

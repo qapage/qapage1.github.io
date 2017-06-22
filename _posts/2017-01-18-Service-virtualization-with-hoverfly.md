@@ -3,7 +3,6 @@ layout: post
 title: Service virtualization with hoverfly
 categories: [csv, data]
 tags: [csv]
-bigimg: /img/smyrna.jpg
 ---
 Hoverfly from spect.io is an open source tool that allows one to simulate an API, capture, modify and playback responses from an API etc. It is an invaluable tool that speeds up your testing and helps you simulate those hard to reproduce situations when dealing with a real API. Say you want to simulate an API being down or sending you bad responses, without taking down the real API which may be in use by other teams, what can you do? Or you’re writing up tests before the actual service has been built. All you have is a spec that tells you what the response should be for every request. What do you do then?
 

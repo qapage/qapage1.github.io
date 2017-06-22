@@ -3,7 +3,6 @@ layout: post
 title: My top linux commands
 categories: [linux]
 tags: [linux]
-bigimg: /img/smyrna.jpg
 ---
 I’ve mostly worked on linux/unix machines for the most part of my career. These are some of the linux commands that have been very useful to me in different situations on various projects, testing related or otherwise.
 

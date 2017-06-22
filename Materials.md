@@ -2,7 +2,6 @@
 layout: page
 title: Recommended Materials
 subtitle: Super helpful books, blogs etc
-bigimg: /img/smyrna.jpg
 ---
 
 ### Books
