@@ -4,14 +4,14 @@ title: FAQs
 subtitle: Here are some frequently asked questions and their answers.
 ---
 
-##### What is QA?
+#### What is QA?
 QA stands for Quality Assurance. Its all about delivering software that works every time, all the time! We look at different aspects of a product’s quality including but not limited to,
 
  * does it work as expected?
  * does it behave well when it encounters unexpected situations/input?
  * does it work well under heavier than expected load?
 
-##### What are the different types of QA?
+#### What are the different types of QA?
 
 There are a lot of different types of testing, each of them done at a different time in the project's lifecyle, with a different goal in mind.
 
@@ -20,7 +20,7 @@ There are a lot of different types of testing, each of them done at a different 
  * End to End testing or Acceptance testing: higher level tests that use the system as a blackbox and check if it functions as expected.
  * Performance or load or stress testing: trying to find out how the system performs under heavy loads or trying to find out the system's limits.
 
-##### What are the different QA Metrics?
+#### What are the different QA Metrics?
 
 There are several QA Metrics that are of interest, depending on what kind of project you are working on.
 
@@ -30,6 +30,6 @@ There are several QA Metrics that are of interest, depending on what kind of pro
  * Defect injection rate: How many defects do you have per iteration or phase of the product development lifecycle?
  * Defect density: How many defects do you have per 1000 lines of code on your project? That is your defect density.
 
-##### What is accessibility testing?
+#### What is accessibility testing?
 
 It is a subset of usability testing, and it is performed to ensure that the application being tested is usable by people with disabilities like hearing, color blindness, old age and other disadvantaged groups
